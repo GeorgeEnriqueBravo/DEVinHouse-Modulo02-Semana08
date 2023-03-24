@@ -16,46 +16,88 @@ Após o download, abra a pasta "ExerciciosM02S08" utilizando o software `Intelli
 ---
 
 # Lista de exercícios <img width="75px" alt="Philips" src="ExerciciosM02S08/images/lista.png"/>
-### [M2S07] Ex 1 - Banco de dados Escola
+### [M2S08] Ex 1 - Guarda empresas
 
-Crie um banco de dados no seu servidor local chamado “escola”.
+Criei uma aplicação Servlet, que receberá uma requisição http no seguinte formato:
 
-Crie uma tabela para armazenar os dados de professores (nome, sobrenome, endereço, telefone, e-mail, data de nascimento, nacionalidade, etc.), outra para estudantes (nome, sobrenome, matrícula, e-mail, data de nascimento, nacionalidade, média geral, etc.) e outra para cursos (código, nome, se é EAD ou presencial, quem é o professor, número máximo de alunos, etc.).
+http://localhost:8080/HelloWorld/novaEmpresa?nome=Empresa
 
-### [M2S07] Ex 2 - Tabela matrícula
+Esse programa deve exibir o nome da empresa na tela e no terminal da aplicação.
 
-Crie uma tabela de ligação entre alunos e cursos, contendo o identificador do aluno, o identificador do curso e a média do aluno naquele curso.
+### [M2S08] Ex 2 - Lista empresas
 
-### [M2S07] Ex 3 - Chaves
+- Crie um programa que recebe o nome de uma empresa com o CNPJ em um método doPost por meio de um formulário.
+- Armazene essa empresa em uma lista.
+- Ao chamarmos um método doGet o cliente deve receber uma lista dos nomes das empresas cadastradas anteriormente.
 
-Crie chaves primárias para todas as tabelas existentes.
+### [M2S08] Ex 3 - Projeto Maven
 
-Crie chaves estrangeiras onde forem necessárias (dica: a coluna referente ao professor na tabela cursos).
+- Crie um novo projeto Maven em sua IDE e uma classe Cliente.
+- Baixe uma dependência utilizando o pom.
+- Comprove que ela foi baixada no diretório onde o Maven mantém as dependências localmente, através de um print.
+- A dependência fica a critério do aluno.
+- Por fim, o Aluno deve executar o comando packge e o comando install.
 
-### [M2S07] Ex 4 - Inserção de dados
+### [M2S08] Ex 4 - Projeto Modular Maven
 
-Insira pelo menos 3 registros em cada tabela (quanto mais, melhor).
+- Crie um novo projeto e dentro dele 3 módulos com a IDE de sua escolha.
+- Na raiz do projeto deve adicionar uma dependência de sua escolha e 2 módulos como dependências do 3º.
 
-Dica: Você pode utilizar este site para gerar dados: <a href="https://www.4devs.com.br/gerador_de_pessoas" target="_blank">
-    Gerador de documentos de pessoas (Nome, RG, CPF, CEP, Endereço, etc) - 4Devs
-</a>
+### [M2S08] Ex 5 - Cliente
 
-### [M2S07] Ex 5 - Manipulando registros
+Crie um Projeto Spring Framework que tenha uma entidade "Cliente".
+O programa deve ser capaz de:
 
-Atualize a informação de média geral de um aluno.
+- Criar um novo objeto Cliente.
+- Pesquisar todos os Clientes
+- Deletar um Cliente específico com base no seu ID
+- Alterar um Cliente com base no seu ID
+- Pesquisar um Cliente com base no seu ID
+- O Cliente precisa ter um nome e o CPF e o serviço de validação do CPF antes de criar um novo cliente.
 
-Atualize os cursos cujos professores não moram em Santa Catarina para o modelo EAD.
+### [M2S08] Ex 6 - Conta e Cliente
 
-Exclua um curso.
+No Projeto Spring Framework, adicione uma entidade Conta.
+O programa deve ser capaz de:
 
-### [M2S07] Ex 6 - Consultas
+- Criar um novo objeto Conta
+- Pesquisar todos os objetos Conta
+- Deletar um objeto Conta específico com base no seu ID
+- Alterar um objeto Conta com base no seu ID
+- Pesquisar um objeto Conta com base no seu ID
+- A Conta deve ter um cliente vinculado a ela e ser criada com um valor zerado.
+- Deve ser possível realizar depósitos e saques de valores de uma Conta, porém o valor na Conta nunca pode ficar negativo.
 
-1. Busque os cursos que possuem número máximo de alunos maior do que 30 e que sejam presenciais.
-2. Busque os professores nascidos na América do Sul.
-3. Busque os alunos cujos nomes comecem com a letra J.
-4. Busque os alunos com a média geral maior do que 7, ordenando do maior para o menor.
-5. Busque por todos os cursos ministrados por professoras.
-6. Busque por todos os alunos que estão matriculados em cursos EAD.
+### [M2S08] Ex 7 - Conte e Cliente na Web
+
+Com base no programa criado com o Spring Framework, crie um programa Spring Boot que nos permita realizar o cadastro e a consulta das entidades "Conta" e "Cliente".
+Essas funcionalidades devem ser feitas por meio de requisições HTTP:
+
+- As requisições devem ser POST para cadastro e GET para consulta.
+- As requisições devem ser feitas nos endpoints /cliente e no /conta.
+- As requisições devem ser no padrão JSON.
+
+### [M2S08] Ex 8 - Conta e Cliente com Memória de curto prazo
+
+Agora expandindo as funcionalidades do programa anterior, devemos ser capazes de realizar todas as operações CRUD(Create, Read, Update, Delete) tanto para a "Conta" quanto para o "Cliente".
+
+- Os endpoints devem ser os mesmos
+- A operação de Update deve ser feita por meio do PUT e deve usar o ID da entidade em questão, seja ela Cliente ou Conta.
+- A operação de Delete deve ser feita por meio do Delete, e deve também usar o ID da entidade em questão.
+
+### [M2S08] Ex 9 - Adicionando Verificações e Transferência
+
+Adicione as verificações que já existiam anteriormente e também crie um endpoint /conta/transfere que ao receber um método PUT com o ID de 2 contas, fará a transferência do valor de uma delas para a outra.
+
+O corpo da resposta tem que ter o novo valor de cada uma das contas no formato JSON.
+
+### [M2S08] Ex 10 - Mensagens de Erro
+
+- Adicione mensagens de ERRO que serão retornadas no formato JSON para cada método que podemos realizar.
+No corpo dessas mensagens deve constar o método e a classe onde o ERRO ocorreu, bem como a descrição do ERRO fornecida no catch.
+- Deve ser retornado no formato JSON.
+- As mensagens devem ser enviadas com um status apropriado.
+
 
 ---
 
