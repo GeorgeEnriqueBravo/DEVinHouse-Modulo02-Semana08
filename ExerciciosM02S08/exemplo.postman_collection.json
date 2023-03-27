@@ -1,0 +1,456 @@
+{
+	"info": {
+		"_postman_id": "063bfbb3-e439-4ece-84f0-b28d117ec9f3",
+		"name": "exemplo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8081/cliente",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/cliente",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/cliente Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/cliente?id=0",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cliente"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/cliente-Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpf\":\"03235171029\",\r\n    \"nome\":\"Lionel West\",\r\n    \"idade\":47\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/cliente",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/cliente-Post2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpf\":\"03235171029\",\r\n    \"nome\":\"Alberto Ramirez Gomes\",\r\n    \"idade\":31\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/cliente",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/cliente-Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpf\":\"03235171029\",\r\n    \"nome\":\"Alberto Ramirez Gomes\",\r\n    \"idade\":31\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/cliente/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cliente",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/cliente-atualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpf\":\"03235171029\",\r\n    \"nome\":\"Daniel Bandeira\",\r\n    \"idade\":52\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/cliente?id=0",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cliente"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/conta",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/conta",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"conta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/conta-get-id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/conta?id=0",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"conta"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/conta-post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_cliente\":0,\r\n    \"cpf\":\"03235171029\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/conta?id=0",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"conta"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/conta-post2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_cliente\":1,\r\n    \"cpf\":\"03235171029\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/conta?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"conta"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/conta-deposito",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_cliente\":0,\r\n    \"valor\":100.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/conta/deposito?id=0&valor=265.03",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"conta",
+						"deposito"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0"
+						},
+						{
+							"key": "valor",
+							"value": "265.03"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/conta-saque",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_cliente\":0,\r\n    \"valor\":100.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/conta/saque?id=0&valor=200",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"conta",
+						"saque"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0"
+						},
+						{
+							"key": "valor",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/conta-transferencia",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_cliente\":0,\r\n    \"valor\":100.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/conta/transfere?idContaEnvia=0&idContaRecebe=1&valor=100",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"conta",
+						"transfere"
+					],
+					"query": [
+						{
+							"key": "idContaEnvia",
+							"value": "0"
+						},
+						{
+							"key": "idContaRecebe",
+							"value": "1"
+						},
+						{
+							"key": "valor",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/conta-delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"conta\":\"03235171029\",\r\n    \"valor\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/conta/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"conta",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
